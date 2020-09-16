@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+
+  @media screen and (min-width: 720px) {
+    flex-direction: column;
+  }
+}
+
+.image {
+  width: 20%;
+}
+
+.details {
+  width: 80%;
+}

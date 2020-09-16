@@ -1,0 +1,20 @@
+@mixin bp-small {
+  @media (max-width: $breakpoints-sm) {
+    @content;
+  }
+}
+@mixin bp-medium {
+  @media (min-width: $breakpoints-md) {
+    @content;
+  }
+}
+@mixin bp-large {
+  @media (min-width: $breakpoints-lg) {
+    @content;
+  }
+}
+@mixin bp-xlarge {
+  @media (min-width: $breakpoints-xl) {
+    @content;
+  }
+}

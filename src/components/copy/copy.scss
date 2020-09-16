@@ -1,0 +1,23 @@
+:host {
+  font-family: 'Lato', arial, sans-serif;
+  color: $color-black;
+  display: block;
+  * {
+    margin: 0;
+  }
+}
+
+.small {
+  font-size: $type-size-0;
+  line-height: $type-height-0;
+}
+
+.medium {
+  font-size: $type-size-1;
+  line-height: $type-height-1;
+}
+
+.large {
+  font-size: $type-size-2;
+  line-height: $type-height-2;
+}

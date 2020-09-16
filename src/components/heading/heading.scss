@@ -1,0 +1,48 @@
+:host {
+  font-family: 'Khula', arial, sans-serif;
+  text-transform: uppercase;
+  color: $color-black;
+  * {
+    margin: 0;
+  }
+}
+
+.small {
+  font-size: $type-size-3;
+  line-height: $type-height-2;
+
+  @include bp-medium {
+    font-size: $type-size-5;
+    line-height: $type-height-3;
+  }
+}
+
+.medium {
+  font-size: $type-size-4;
+  line-height: $type-height-2;
+
+  @include bp-medium {
+    font-size: $type-size-7;
+    line-height: $type-height-4;
+  }
+}
+
+.large {
+  font-size: $type-size-6;
+  line-height: $type-height-3;
+
+  @include bp-medium {
+    font-size: $type-size-8;
+    line-height: $type-height-6;
+  }
+}
+
+.title {
+  font-size: $type-size-8;
+  line-height: $type-height-5;
+
+  @include bp-medium {
+    font-size: $type-size-9;
+    line-height: $type-height-7;
+  }
+}

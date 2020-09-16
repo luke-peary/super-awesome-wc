@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  &.fixed {
+    @include bp-medium {
+      width: $container-fixed-md;
+    }
+    @include bp-large {
+      width: $container-fixed-lg;
+    }
+    @include bp-xlarge {
+      width: $container-fixed-xl;
+    }
+  }
+
+  &.fluid {
+    @include bp-medium {
+      width: $container-fluid-md;
+    }
+    @include bp-large {
+      width: $container-fluid-lg;
+    }
+    @include bp-xlarge {
+      width: $container-fluid-xl;
+    }
+  }
+}

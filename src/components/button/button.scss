@@ -1,0 +1,62 @@
+button {
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: $border-radius-sm;
+  border-width: $border-width-thick;
+  width: 100%;
+  border-style: none;
+  font-size: $type-size-1;
+  line-height: $type-height-1;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  @include bp-medium {
+    width: auto;
+  }
+
+  &.primary {
+    color: $color-white;
+    background-color: $color-primary-600;
+    border-color: $color-primary-600;
+    &:hover {
+      background-color: $color-secondary-600;
+      border-color: $color-secondary-600;
+    }
+    &:focus {
+      border-color: $color-secondary-700;
+    }
+    &:disabled {
+      color: $color-neutral-500;
+      background-color: $color-neutral-100;
+      border-color: $color-neutral-100;
+    }
+  }
+
+  &.secondary {
+    color: $color-neutral-800;
+    background-color: $color-neutral-100;
+    border-color: $color-neutral-100;
+    &:hover {
+      color: $color-black;
+      background-color: $color-neutral-200;
+      border-color: $color-neutral-200;
+    }
+    &:focus {
+      border-color: $color-primary-600;
+    }
+    &:disabled {
+      color: $color-neutral-500;
+      background-color: $color-neutral-100;
+      border-color: $color-neutral-100;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+input {
+  color: #3b013b;
+  height: 40px;
+  display: block;
+  padding: 0 8px;
+  margin-bottom: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
