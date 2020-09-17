@@ -6,40 +6,14 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
     interface SaButton {
         "disabled": boolean;
         "type": string;
         "variant": 'primary' | 'secondary';
     }
-    interface SaContainer {
-        "variant": 'fixed' | 'fluid';
-    }
     interface SaCopy {
         "as": 'span' | 'p';
         "variant": 'small' | 'medium' | 'large';
-    }
-    interface SaGrid {
-        "gutter": boolean;
-        "verticalGutter": boolean;
-    }
-    interface SaGridItem {
-        "pull": number;
-        "push": number;
-        "width": boolean;
     }
     interface SaHeading {
         "as": 'h1' | 'h2';
@@ -51,6 +25,9 @@ export namespace Components {
     interface SaProductTile {
         "img": string;
         "name": string;
+        "price": number;
+        "quantity": number;
+        "units": string;
     }
     interface SaTextInput {
         "disabled": boolean;
@@ -65,41 +42,17 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLSaButtonElement extends Components.SaButton, HTMLStencilElement {
     }
     var HTMLSaButtonElement: {
         prototype: HTMLSaButtonElement;
         new (): HTMLSaButtonElement;
     };
-    interface HTMLSaContainerElement extends Components.SaContainer, HTMLStencilElement {
-    }
-    var HTMLSaContainerElement: {
-        prototype: HTMLSaContainerElement;
-        new (): HTMLSaContainerElement;
-    };
     interface HTMLSaCopyElement extends Components.SaCopy, HTMLStencilElement {
     }
     var HTMLSaCopyElement: {
         prototype: HTMLSaCopyElement;
         new (): HTMLSaCopyElement;
-    };
-    interface HTMLSaGridElement extends Components.SaGrid, HTMLStencilElement {
-    }
-    var HTMLSaGridElement: {
-        prototype: HTMLSaGridElement;
-        new (): HTMLSaGridElement;
-    };
-    interface HTMLSaGridItemElement extends Components.SaGridItem, HTMLStencilElement {
-    }
-    var HTMLSaGridItemElement: {
-        prototype: HTMLSaGridItemElement;
-        new (): HTMLSaGridItemElement;
     };
     interface HTMLSaHeadingElement extends Components.SaHeading, HTMLStencilElement {
     }
@@ -132,12 +85,8 @@ declare global {
         new (): HTMLTwgOffCanvasElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
         "sa-button": HTMLSaButtonElement;
-        "sa-container": HTMLSaContainerElement;
         "sa-copy": HTMLSaCopyElement;
-        "sa-grid": HTMLSaGridElement;
-        "sa-grid-item": HTMLSaGridItemElement;
         "sa-heading": HTMLSaHeadingElement;
         "sa-image": HTMLSaImageElement;
         "sa-product-tile": HTMLSaProductTileElement;
@@ -146,40 +95,14 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface SaButton {
         "disabled"?: boolean;
         "type"?: string;
         "variant"?: 'primary' | 'secondary';
     }
-    interface SaContainer {
-        "variant"?: 'fixed' | 'fluid';
-    }
     interface SaCopy {
         "as"?: 'span' | 'p';
         "variant"?: 'small' | 'medium' | 'large';
-    }
-    interface SaGrid {
-        "gutter"?: boolean;
-        "verticalGutter"?: boolean;
-    }
-    interface SaGridItem {
-        "pull"?: number;
-        "push"?: number;
-        "width"?: boolean;
     }
     interface SaHeading {
         "as"?: 'h1' | 'h2';
@@ -191,6 +114,9 @@ declare namespace LocalJSX {
     interface SaProductTile {
         "img"?: string;
         "name"?: string;
+        "price"?: number;
+        "quantity"?: number;
+        "units"?: string;
     }
     interface SaTextInput {
         "disabled"?: boolean;
@@ -203,12 +129,8 @@ declare namespace LocalJSX {
         "isOpen"?: boolean;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
         "sa-button": SaButton;
-        "sa-container": SaContainer;
         "sa-copy": SaCopy;
-        "sa-grid": SaGrid;
-        "sa-grid-item": SaGridItem;
         "sa-heading": SaHeading;
         "sa-image": SaImage;
         "sa-product-tile": SaProductTile;
@@ -220,12 +142,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "sa-button": LocalJSX.SaButton & JSXBase.HTMLAttributes<HTMLSaButtonElement>;
-            "sa-container": LocalJSX.SaContainer & JSXBase.HTMLAttributes<HTMLSaContainerElement>;
             "sa-copy": LocalJSX.SaCopy & JSXBase.HTMLAttributes<HTMLSaCopyElement>;
-            "sa-grid": LocalJSX.SaGrid & JSXBase.HTMLAttributes<HTMLSaGridElement>;
-            "sa-grid-item": LocalJSX.SaGridItem & JSXBase.HTMLAttributes<HTMLSaGridItemElement>;
             "sa-heading": LocalJSX.SaHeading & JSXBase.HTMLAttributes<HTMLSaHeadingElement>;
             "sa-image": LocalJSX.SaImage & JSXBase.HTMLAttributes<HTMLSaImageElement>;
             "sa-product-tile": LocalJSX.SaProductTile & JSXBase.HTMLAttributes<HTMLSaProductTileElement>;

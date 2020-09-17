@@ -19,6 +19,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  globalStyle: 'src/global/global.css',
   plugins: [
     sass({
       injectGlobalPaths: ['src/global/styles/variables.scss', 'src/global/styles/mixins.scss'],
