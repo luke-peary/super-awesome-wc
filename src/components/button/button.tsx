@@ -9,9 +9,20 @@ export class Button {
   @Prop() type: string;
   @Prop() disabled: boolean;
 
+  connectedCallback() {
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event: MouseEvent) {
+    if (this.disabled) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }
+
   render() {
     return (
-      <button type={this.type} disabled={this.disabled} class={this.variant}>
+      <button type={this.type} disabled={this.disabled} class={this.variant} onClick={this.handleClick}>
         <slot />
       </button>
     );

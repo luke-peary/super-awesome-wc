@@ -27,7 +27,6 @@ export namespace Components {
         "name": string;
         "price": number;
         "quantity": number;
-        "units": string;
     }
     interface SaTextInput {
         "disabled": boolean;
@@ -114,9 +113,10 @@ declare namespace LocalJSX {
     interface SaProductTile {
         "img"?: string;
         "name"?: string;
+        "onAddedToCart"?: (event: CustomEvent<any>) => void;
+        "onRemoved"?: (event: CustomEvent<any>) => void;
         "price"?: number;
         "quantity"?: number;
-        "units"?: string;
     }
     interface SaTextInput {
         "disabled"?: boolean;
